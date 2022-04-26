@@ -1,0 +1,81 @@
+@import "./css/_reset.scss";
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    width: 390px;
+    background: $background;
+    padding: 19px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    &__display {
+        width: 100%;
+    }
+    &__display-input {
+        background: transparent;
+        border: 0;
+        color: $white;
+        outline: transparent;
+        font-size: calculator-rem(48);
+        text-align: right;
+        width: 100%;
+        margin-top: 50px;
+    }
+    &__display-result {
+        color: $light-grey;
+        font-size: calculator-rem(48);
+        text-align: right;
+        width: 100%;
+        margin-top: 80px;
+    }
+    &__callback {
+        margin-top: 30px;
+    }
+    &__line-separator {
+        width: 352px;
+        border: 1px solid #4E4D4D;
+        margin: 20px 0 25px;
+    }
+    &__buttons {
+        &--button {
+            background: $grey;
+            width: 73px;
+            height: 73px;
+            border-radius: 9px;
+            border: 0;
+            color: $white;
+            font-size: calculator-rem(36);
+            &:hover {
+                background: lighten($grey, 30%);
+            }
+        }
+        &--button-background-red {
+            background: $red;
+            &:hover {
+                background: lighten($red, 10%);
+            }
+        }
+        &--button-background-green {
+            background: $green;
+            &:hover {
+                background: lighten($green, 20%);
+            }
+        }
+        &--button-color-green {
+            color: $green;
+        }
+        &--button-color-grey {
+            color: $grey;
+        }
+    }
+    &__buttons-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
